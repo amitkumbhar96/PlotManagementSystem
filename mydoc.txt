@@ -1,0 +1,34 @@
+server/
+│── main.py
+│── database.py
+│── models.py
+│── schemas.py
+│── crud.py
+│── routers/
+│   ├── auth.py
+│   ├── plots.py
+│   ├── buyers.py
+│   ├── inquiries.py
+│── plot.db
+
+pip install fastapi uvicorn sqlalchemy pandas openpyxl  
+uvicorn main:app --reload
+python app.py
+
+
+desktopapp/
+│── main.py
+│── api_client.py
+│── auth_store.py
+│
+│── screens/
+│   ├── login_screen.py
+│   ├── dashboard.py
+│   ├── plot_details.py
+│   ├── buy_form.py
+│   ├── inquiry_form.py
+│
+│── utils/
+│   ├── config.py
+│   ├── messagebox.py
+
