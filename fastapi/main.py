@@ -8,6 +8,17 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI(title="Plot Management API")
 
+@app.get("/")
+def root():
+    return {"status": "Plot Management API running"}
+
+@app.get("/health")
+def health_check():
+    return {
+        "status": "UP",
+        "service": "Plot Management API"
+    }
+
 app.include_router(auth.router)
 app.include_router(plots.router)
 app.include_router(buyers.router)
